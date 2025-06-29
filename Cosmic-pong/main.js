@@ -45,7 +45,8 @@ const ball = {
     velocityY: 5,
     spin: 0,
     color: '#ffff00',
-    shadowColor: '#ffff00'
+    shadowColor: '#ffff00',
+    isSlowStart: true
 };
 
 // Stars
@@ -172,12 +173,13 @@ let screenShake = 0;
 function resetBall() {
     ball.x = canvas.width / 2;
     ball.y = canvas.height / 2;
-    ball.velocityX = (Math.random() > 0.5 ? 1 : -1) * ball.speed; // Random initial direction
-    ball.velocityY = (Math.random() > 0.5 ? 1 : -1) * ball.speed * 0.5; // Random initial vertical component
-    ball.speed = ball.initialSpeed;
+    ball.velocityX = (Math.random() > 0.5 ? 1 : -1) * 8; // Start with a fixed slow speed
+    ball.velocityY = (Math.random() > 0.5 ? 1 : -1) * 8 * 0.5; // Start with a fixed slow speed
+    ball.speed = 8; // Set current speed to slow start speed
     ball.spin = 0;
     rally = 0;
     updateRallyCounter();
+    ball.isSlowStart = true; // Indicate slow start
 }
 
 function collision(b, p) {
@@ -327,6 +329,11 @@ function update() {
         screenShake = 15;
         rally++;
         updateRallyCounter();
+
+        if (ball.isSlowStart) {
+            ball.speed = ball.initialSpeed;
+            ball.isSlowStart = false;
+        }
 
         for (let i = 0; i < 20; i++) {
             particles.push({
