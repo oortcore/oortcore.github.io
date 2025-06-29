@@ -1,77 +1,186 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background-color: #1a1a2e;
     color: #e0e0e0;
+    line-height: 1.6;
 }
 
-header {
-    background-color: #16213e;
-    padding: 20px;
+.container {
+    max-width: 1000px; /* Increased max-width for a more spacious feel */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #16213e, #0f3460);
+    padding: 80px 20px;
     text-align: center;
-    border-bottom: 2px solid #0f3460;
+    color: white;
+    border-bottom: 5px solid #e94560;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-header h1 {
+.hero h1 {
     margin: 0;
-    font-size: 3em;
+    font-size: 5em; /* Larger font size for impact */
     color: #e94560;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+    letter-spacing: 3px;
 }
 
-header p {
-    font-size: 1.2em;
+.hero p {
+    font-size: 2em;
     color: #e0e0e0;
+    margin-top: 15px;
+}
+
+.about-me-section {
+    background-color: #0f3460;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 2px solid #16213e;
+}
+
+.about-me-section h2 {
+    color: #e94560;
+    font-size: 3.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.about-me-section p {
+    font-size: 1.3em;
+    color: #c0c0c0;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 main {
-    padding: 20px;
+    padding: 60px 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 100px); /* Adjust based on header height */
+    flex-direction: column;
+    gap: 60px; /* Space between main sections */
+}
+
+.content-section {
+    text-align: center;
+}
+
+.content-section h2 {
+    color: #e94560;
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.book-card {
+    background-color: #16213e;
+    border-radius: 15px;
+    padding: 40px;
+    width: 700px; /* Wider for book details */
+    max-width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #0f3460;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.book-card h3 {
+    color: #e94560;
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.book-card p {
+    color: #e0e0e0;
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.book-card a {
+    display: inline-block;
+    background-color: #e94560;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.book-card a:hover {
+    background-color: #ba3a50;
+    transform: scale(1.05);
 }
 
 .game-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px; /* Increased gap between game cards */
     justify-content: center;
+    width: 100%;
 }
 
 .game-card {
-    background-color: #0f3460;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
+    background-color: #16213e;
+    border-radius: 15px;
+    padding: 30px;
+    width: 350px; /* Slightly larger game cards */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #0f3460;
 }
 
 .game-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
 }
 
-.game-card h2 {
+.game-card h3 {
     color: #e94560;
     margin-top: 0;
+    font-size: 2.2em;
+    margin-bottom: 15px;
 }
 
 .game-card p {
     color: #e0e0e0;
+    margin-bottom: 25px;
+    font-size: 1.1em;
 }
 
 .game-card a {
     display: inline-block;
     background-color: #e94560;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    transition: background-color 0.3s ease-in-out;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .game-card a:hover {
     background-color: #ba3a50;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #16213e;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #0f3460;
+    font-size: 0.9em;
 }
