@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retro Ping Pong</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Cosmic Pong</h1>
+        <div id="characterSelection">
+            <h2>Select Your Champion</h2>
+            <div class="character" id="blaze">
+                <div class="swatch blaze"></div>
+                <h3>Blaze</h3>
+            </div>
+            <div class="character" id="aqua">
+                <div class="swatch aqua"></div>
+                <h3>Aqua</h3>
+            </div>
+            <div class="character" id="terra">
+                <div class="swatch terra"></div>
+                <h3>Terra</h3>
+            </div>
+        </div>
+        <div id="difficultySelection">
+            <h2>Select Difficulty</h2>
+            <button class="difficulty" data-level="0.05" data-speed="5">Easy</button>
+            <button class="difficulty" data-level="0.1" data-speed="8">Medium</button>
+            <button class="difficulty" data-level="0.2" data-speed="12">Hard</button>
+            <button class="difficulty" data-level="0.3" data-speed="15">Extreme</button>
+        </div>
+        <button id="startButton">Start Game</button>
+    </div>
+    <div id="gameContainer" style="display: none;">
+        <canvas id="gameCanvas"></canvas>
+        <div id="controls">
+            <button id="pauseButton">Pause</button>
+            <button id="quitButton">Quit</button>
+            <span>Speed:</span>
+            <button id="decreaseSpeed">-</button>
+            <span id="speedDisplay">8</span>
+            <button id="increaseSpeed">+</button>
+        </div>
+        <div id="rallyCounter">Rally: 0</div>
+    </div>
+    <div id="gameOverOverlay">
+        <div id="gameOverMessage"></div>
+        <button id="restartButton">Restart</button>
+    </div>
+    <div id="designerCredit">Designed by Aarav Parashar</div>
+    <script src="main.js"></script>
+</body>
+</html>
