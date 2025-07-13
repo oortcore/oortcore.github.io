@@ -184,3 +184,51 @@ footer {
     border-top: 2px solid #0f3460;
     font-size: 0.9em;
 }
+
+.youtube-card {
+    background-color: #16213e;
+    border-radius: 15px;
+    padding: 40px;
+    width: 700px;
+    max-width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #0f3460;
+}
+
+.youtube-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.youtube-card h3 {
+    color: #e94560;
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.youtube-card p {
+    color: #e0e0e0;
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.youtube-card a {
+    display: inline-block;
+    background-color: #e94560;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.youtube-card a:hover {
+    background-color: #ba3a50;
+    transform: scale(1.05);
+}
