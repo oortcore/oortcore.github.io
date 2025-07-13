@@ -47,17 +47,17 @@ body {
     margin: 0;
     font-size: 6em;
     color: #00ffff;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
     letter-spacing: 4px;
-    animation: glow 1.5s ease-in-out infinite alternate;
+    animation: glow 1.5s ease-in-out infinite alternate, fadeIn 1.5s ease-in-out;
 }
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
     }
     to {
-        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff;
+        text-shadow: 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff;
     }
 }
 
@@ -169,4 +169,13 @@ footer {
     padding: 30px;
     border-top: 2px solid #00ffff;
     font-size: 1em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero p, .about-me-section h2, .about-me-section p, .content-section h2, .card h3, .card p, .card a {
+    animation: fadeIn 1.5s ease-in-out;
 }
